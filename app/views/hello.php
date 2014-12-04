@@ -40,6 +40,7 @@
 			<a href="http://www.youtube.com/playlist?list=PLgJIx0-UaB9Q42Gthfg__0iynLVqcbXOQ">On YouTube</a>
 		</p>
 		<p>More coming soon.</p>
+		<p><a href="https://github.com/mattstauffer/fiveMinuteGeekShow/">Github</a></p>
 	</div>
 </body>
 </html>
