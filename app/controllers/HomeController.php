@@ -17,7 +17,10 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
-		return View::make('hello');
+		$playlist = FiveMinuteGeekShow\YouTube\Playlist::fromPlaylistId('PLgJIx0-UaB9Q42Gthfg__0iynLVqcbXOQ');
+
+		return View::make('hello')
+			->with('playlist', $playlist);
 	}
 
 }

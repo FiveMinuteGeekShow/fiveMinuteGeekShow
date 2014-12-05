@@ -1,21 +1,24 @@
 {
-	"name": "laravel/laravel",
-	"description": "The Laravel Framework.",
-	"keywords": ["framework", "laravel"],
+	"name": "mattstauffer/fiveminutegeekshow",
+	"description": "The Five Minute Geeek Show",
+	"keywords": ["mattstauffer", "geek"],
 	"license": "MIT",
 	"type": "project",
 	"require": {
-		"laravel/framework": "4.2.*"
+		"laravel/framework": "4.2.*",
+		"madcoda/php-youtube-api": "~1.0",
+		"vlucas/phpdotenv": "~1.0"
 	},
 	"autoload": {
 		"classmap": [
 			"app/commands",
 			"app/controllers",
-			"app/models",
 			"app/database/migrations",
-			"app/database/seeds",
-			"app/tests/TestCase.php"
-		]
+			"app/database/seeds"
+		],
+		"psr-4": {
+			"FiveMinuteGeekShow\\": "src/"
+		}
 	},
 	"scripts": {
 		"post-install-cmd": [
