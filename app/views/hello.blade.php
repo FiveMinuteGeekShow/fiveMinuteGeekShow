@@ -76,6 +76,18 @@
 
 		<hr>
 
+		<h2>SoundCloud</h2>
+		<p>I've applied to be a SoundCloud Podcaster, so eventually this will be an iTunes podcast. For now, they're online:</p>
+
+		<p><a href="https://soundcloud.com/fiveminutegeekshow">soundcloud.com/fiveminutegeekshow</a></p>
+
+		<hr>
+
+		<h2>Twitter</h2>
+		<p><a href="http://twitter.com/5minutegeekshow">@5minutegeekshow</a></p>
+
+		<hr>
+
 		<h2>Github</h2>
 		<p><a href="https://github.com/mattstauffer/fiveMinuteGeekShow/">mattstauffer/fiveMinuteGeekShow</a></p>
 	</div>
