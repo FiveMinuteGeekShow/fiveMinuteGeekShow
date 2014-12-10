@@ -78,6 +78,13 @@
 
 		<p><a href="https://soundcloud.com/fiveminutegeekshow">soundcloud.com/fiveminutegeekshow</a></p>
 
+				<h3>Episodes</h3>
+        		<ul class="videos-list">
+        			@foreach ($soundcloudTracks as $track)
+        				<li><a href="{{ $track->permalink_url }}" style="font-weight: bold;">{{ $track->title }}</a><br>{{ $track->description }}<br><br></li>
+        			@endforeach
+        		</ul>
+
 		<hr>
 
 		<h2>Twitter</h2>

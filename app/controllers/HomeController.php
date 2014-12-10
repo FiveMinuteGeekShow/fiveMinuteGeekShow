@@ -17,10 +17,19 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
+		$soundcloudUserId = 126321492;
+//		$soundcloudPlaylistId = 1171437;
+
+		$client = new Soundcloud\Service(getenv('SOUNDCLOUD_API_ID'), getenv('SOUNDCLOUD_API_SECRET'));
+
+		// there HAS to be a better way to get this playlist
+		$tracks = $client->get('users/126321492/tracks', array('tag' => 'theFiveMinuteGeekShow'));
+
 		$playlist = FiveMinuteGeekShow\YouTube\Playlist::fromPlaylistId('PLgJIx0-UaB9Q42Gthfg__0iynLVqcbXOQ');
 
 		return View::make('hello')
-			->with('playlist', $playlist);
+			->with('playlist', $playlist)
+			->with('soundcloudTracks', json_decode($tracks));
 	}
 
 }
