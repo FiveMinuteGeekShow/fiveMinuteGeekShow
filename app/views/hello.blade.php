@@ -3,43 +3,30 @@
 <head>
 	<meta charset="UTF-8">
 	<title>The Five Minute Geek Show</title>
-	<meta name="description" content="The Five-Minute Geek Show: Matt Stauffer, 5 minutes, often ish.">
+	<meta name="description" content="The Five-Minute Geek Show: Matt Stauffer, 5 minutes, twice a week.">
 	<meta name="author" content="Matt Stauffer">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<style>
-		@import url(//fonts.googleapis.com/css?family=Lato:700);
+		img {
+		    max-width: 100%;
+		}
 
 		body {
 			margin:0;
-			font-family:'Lato', sans-serif;
-			text-align:center;
+			font-family: arial, sans-serif;
+			text-align: center;
 			color: #999;
 		}
 
 		.welcome {
-			max-width: 90%;
-			height: 200px;
-			position: absolute;
-			top: 50%;
-			margin-top: -100px;
-		}
-
-		@media only screen and (min-width: 500px) {
-			.welcome {
-				left: 50%;
-				margin-left: -250px;
-				width: 500px;
-			}
+			margin: 5em auto;
+            max-width: 500px;
+			width: 90%;
 		}
 
 		a, a:visited {
 			text-decoration:none;
-		}
-
-		h1 {
-			font-size: 32px;
-			margin: 16px 0 0 0;
 		}
 
 		.videos-list {
@@ -59,17 +46,15 @@
 </head>
 <body>
 	<div class="welcome">
-		<h1>The Five-Minute Geek Show</h1>
+		<h1><img src="/assets/img/logo.png" style="width: 561px;" alt="The Five-Minute Geek Show"></h1>
 		
-		<hr>
-
 		<h2>YouTube:</h2>
 		<a href="http://www.youtube.com/playlist?list=PLgJIx0-UaB9Q42Gthfg__0iynLVqcbXOQ"><h3>View Channel</h3></a>
 
 		<h3>Episodes</h3>
 		<ul class="videos-list">
 			@foreach ($playlist->videos as $video)
-				<li><a href="http://youtube.com/watch?v={{ $video->videoId }}">{{ $video->snippet->title }}</a><br>{{ $video->snippet->description }}</li>
+				<li><a href="http://youtube.com/watch?v={{ $video->videoId }}" style="font-weight: bold;">{{ $video->snippet->title }}</a><br>{{ $video->snippet->description }}<br><br></li>
 			@endforeach
 		</ul>
 		</p>

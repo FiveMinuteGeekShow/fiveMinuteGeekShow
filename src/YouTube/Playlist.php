@@ -33,8 +33,8 @@ class Playlist
 	/**
 	 * Create new object from MadCoda Playlist Response
 	 * 
-	 * @param  stdClass $object
-	 * @param  array    $videos
+	 * @param  \stdClass $playlist
+	 * @param  array     $videos
 	 * @return static
 	 */
 	public static function fromMadcoda(\stdClass $playlist, array $videos)
@@ -64,7 +64,7 @@ class Playlist
 	 */
 	public static function fromPlaylistId($playlistId)
 	{
-		// This is a bit smelly:
+		// This is a bit smelly: I'd prefer we instead inject the service in
 		$youtubeService = \App::make('YouTubeService');
 
 		$videos = $youtubeService->getPlaylistItemsByPlaylistId($playlistId);
