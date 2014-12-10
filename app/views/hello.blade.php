@@ -13,10 +13,11 @@
 		}
 
 		body {
-			margin:0;
+		    border-top: 140px solid #cee7d8;
+			color: #666;
 			font-family: arial, sans-serif;
+			margin: 0;
 			text-align: center;
-			color: #999;
 		}
 
 		.welcome {
@@ -25,8 +26,19 @@
 			width: 90%;
 		}
 
+		.logo {
+		    margin-top: -175px;
+		    width: 561px;
+		}
+
 		a, a:visited {
 			text-decoration:none;
+		}
+
+		hr {
+		    background: #ccc;
+		    border: none;
+		    height: 1px;
 		}
 
 		.videos-list {
@@ -46,7 +58,7 @@
 </head>
 <body>
 	<div class="welcome">
-		<h1><img src="/assets/img/logo.png" style="width: 561px;" alt="The Five-Minute Geek Show"></h1>
+		<h1><img src="/assets/img/logo.png" class="logo" alt="The Five-Minute Geek Show"></h1>
 		
 		<h2>YouTube:</h2>
 		<a href="http://www.youtube.com/playlist?list=PLgJIx0-UaB9Q42Gthfg__0iynLVqcbXOQ"><h3>View Channel</h3></a>
