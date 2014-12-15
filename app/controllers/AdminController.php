@@ -2,15 +2,15 @@
 
 class AdminController extends BaseController
 {
-	public function showSoundcloudPlaylists()
-	{
-		$soundCloudUserId = 126321492;
+    public function showSoundcloudPlaylists()
+    {
+        $soundCloudUserId = 126321492;
 
-		$trackService = App::make('SoundCloudTrackService');
+        $trackService = App::make('SoundCloudTrackService');
 
-		$playlists = $trackService->getPlaylistsByUser($soundCloudUserId);
+        $playlists = $trackService->getPlaylistsByUser($soundCloudUserId);
 
-		return View::make('admin.playlists')
-			->with('playlists', $playlists);
-	}
+        return View::make('admin.playlists')
+            ->with('playlists', $playlists);
+    }
 }

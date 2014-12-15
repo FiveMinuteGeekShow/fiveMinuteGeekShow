@@ -4,64 +4,64 @@ use Illuminate\Support\Collection;
 
 class Video
 {
-	public $kind;
-	public $etag;
-	public $id;
-	public $videoId;
-	public $privacyStatus;
+    public $kind;
+    public $etag;
+    public $id;
+    public $videoId;
+    public $privacyStatus;
 
-	/**
-	 * @var stClass
-	 */
-	public $snippet;
+    /**
+     * @var stClass
+     */
+    public $snippet;
 
-	private function __construct(array $fields, $snippet)
-	{
-		foreach ($fields as $key => $value) {
-			$this->$key = $value;
-		}
+    private function __construct(array $fields, $snippet)
+    {
+        foreach ($fields as $key => $value) {
+            $this->$key = $value;
+        }
 
-		// @todo: Convert to VOs
-		$this->snippet = $snippet;
-	}
-	
-	/**
-	 * Create new object from MadCoda Video Response
-	 * 
-	 * @param  stdClass $video
-	 * @return static
-	 */
-	public static function fromMadcoda(\stdClass $video)
-	{
-		$fields = [];
-		
-		foreach (['kind', 'etag', 'id'] as $key) {
-			$fields[$key] = $video->$key;
-		}
+        // @todo: Convert to VOs
+        $this->snippet = $snippet;
+    }
 
-		$fields['videoId'] = $video->contentDetails->videoId;
-		$fields['privacyStatus'] = $video->status->privacyStatus;
+    /**
+     * Create new object from MadCoda Video Response
+     *
+     * @param  \stdClass $video
+     * @return static
+     */
+    public static function fromMadcoda(\stdClass $video)
+    {
+        $fields = [];
 
-		return new static(
-			$fields,
-			$video->snippet
-		);
-	}
+        foreach (['kind', 'etag', 'id'] as $key) {
+            $fields[$key] = $video->$key;
+        }
 
-	/**
-	 * Return a collection of videos from an array of Madcode Stdclass
-	 * 
-	 * @param  stdClass[]  $videos
-	 * @return Collection of statics
-	 */
-	public static function collectionFromMadcoda(array $videos)
-	{
-		$collection = new Collection;
+        $fields['videoId'] = $video->contentDetails->videoId;
+        $fields['privacyStatus'] = $video->status->privacyStatus;
 
-		foreach ($videos as $video) {
-			$collection->push(static::fromMadcoda($video));
-		}
+        return new static(
+            $fields,
+            $video->snippet
+        );
+    }
 
-		return $collection;
-	}
+    /**
+     * Return a collection of videos from an array of Madcode Stdclass
+     *
+     * @param  stdClass[]  $videos
+     * @return Collection of statics
+     */
+    public static function collectionFromMadcoda(array $videos)
+    {
+        $collection = new Collection;
+
+        foreach ($videos as $video) {
+            $collection->push(static::fromMadcoda($video));
+        }
+
+        return $collection;
+    }
 }
