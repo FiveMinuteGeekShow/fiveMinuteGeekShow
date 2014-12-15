@@ -121,8 +121,8 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-		'FiveMinuteGeekShow\YouTube\YouTubeProvider'
-
+		'FiveMinuteGeekShow\YouTube\YouTubeProvider',
+		'FiveMinuteGeekShow\SoundCloud\SoundCloudProvider'
 	),
 
 	/*
