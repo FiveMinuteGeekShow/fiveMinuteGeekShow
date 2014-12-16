@@ -1,5 +1,7 @@
 <?php  namespace FiveMinuteGeekShow\SoundCloud;
 
+use Exception;
+use Soundcloud\Exception\InvalidHttpResponseCodeException;
 use SoundCloud\Service as ApiCaller;
 
 class TrackService
@@ -23,7 +25,7 @@ class TrackService
     public function getTracksByUser($userId)
     {
         $query = "users/$userId/tracks";
-        $result = $this->api->get($query);
+        $result = $this->callQuery($query);
 
         return json_decode($result);
     }
@@ -37,7 +39,7 @@ class TrackService
     public function getTracksByPlaylist($playlistId)
     {
         $query = "playlists/$playlistId";
-        $result = $this->api->get($query);
+        $result = $this->callQuery($query);
 
         $playlist = json_decode($result);
 
@@ -53,8 +55,31 @@ class TrackService
     public function getPlaylistsByUser($userId)
     {
         $query = "users/$userId/playlists";
-        $result = $this->api->get($query);
+        $result = $this->callQuery($query);
 
         return json_decode($result);
+    }
+
+    /**
+     * Call a query
+     *
+     * @param string $query
+     * @throws InvalidHttpResponseCodeException
+     * @throws Exception if HTTP response code has a custom exception we want to throw
+     * @return string JSON
+     */
+    private function callQuery($query)
+    {
+        try {
+            return $this->api->get($query);
+        } catch (InvalidHttpResponseCodeException $e) {
+            switch ($e->getHttpCode()) {
+                case 0:
+                    throw new Exception('No Internet access.', $e->getCode(), $e);
+                    break;
+                default:
+                    throw $e;
+            }
+        }
     }
 }
