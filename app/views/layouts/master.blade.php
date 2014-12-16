@@ -7,6 +7,8 @@
     <meta name="author" content="Matt Stauffer">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link href="http://feeds.feedburner.com/fiveMinuteGeekShow" rel="alternate" title="The Five-Minute Geek Show RSS" type="application/rss+xml">
+
     <style>
         img {
             max-width: 100%;
