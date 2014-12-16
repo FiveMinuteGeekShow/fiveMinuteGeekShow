@@ -20,7 +20,7 @@
     <h2>SoundCloud</h2>
     <p>I've applied to be a SoundCloud Podcaster, so eventually this will be an iTunes podcast. For now, they're online:</p>
 
-    <p><img src="/assets/img/feed.png" style="width: 17px; height: 16px; margin-right: 0.25em;"><b>RSS feed for manual subscription:</b><br><a href="http://feeds.feedburner.com/FiveMinuteGeekShow">feeds.feedburner.com/FiveMinuteGeekShow</a></p>
+    <p><img src="/assets/img/feed.png" style="width: 17px; height: 16px; margin-right: 0.25em;"><b>RSS feed for manual subscription:</b><br><a href="http://simplecast.fm/podcasts/335/rss">simplecast.fm/podcasts/335/rss</a></p>
     <p><b>Soundcloud:</b><br><a href="https://soundcloud.com/fiveminutegeekshow">soundcloud.com/fiveminutegeekshow</a></p>
 
     <h3>Episodes</h3>

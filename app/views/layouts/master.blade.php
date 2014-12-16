@@ -7,7 +7,7 @@
     <meta name="author" content="Matt Stauffer">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="http://feeds.feedburner.com/fiveMinuteGeekShow" rel="alternate" title="The Five-Minute Geek Show RSS" type="application/rss+xml">
+    <link href="http://simplecast.fm/podcasts/335/rss" rel="alternate" title="The Five-Minute Geek Show RSS" type="application/rss+xml">
 
     <style>
         img {
