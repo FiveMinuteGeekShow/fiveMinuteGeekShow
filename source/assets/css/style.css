@@ -11,5 +11,37 @@ body {
     border: 2em solid white;
     background: #fff;
     margin-top: -8rem;
-    padding: 2em 3em;
+    padding: 0;
+}
+
+
+@media only screen and (min-width: 800px) {
+    .content {
+        padding: 1em 2em;
+    }
+}
+
+.primary-footer {
+    margin-bottom: 2em;
+    margin-top: 3em;
+}
+
+.episode {
+    border-bottom: 5px solid #eee;
+    margin-bottom : 1em;
+    padding-bottom: 2em;
+}
+    .episode-header__title {
+        font-size: 2.5em;
+    }
+    .episode-header__meta {
+        font-size: 1.5em;
+        font-style: italic;
+    }
+    .episode-header__title + .episode-header__meta {
+        margin-top: 0;
+    }
+
+.primary-header__title a {
+    color: #333;
 }

@@ -1,11 +1,11 @@
 <article class="episode">
     <header class="episode-header">
-        <h2 class="episode-header-title">
-            <a class="link--secondary" href="{{ site.url }}{{ episode.url }}">
+        <h2 class="episode-header__title">
+            <a href="{{ site.url }}{{ episode.url }}">
                 Episode {{ episode.number }}: {{ episode.title }}
             </a>
         </h2>
-        <h3 class="episode-header-meta">
+        <h3 class="episode-header__meta">
             {{ episode.date|date('F j, Y') }}
         </h3>
     </header>
@@ -13,14 +13,18 @@
         {{ episode.blocks.content|raw }}
     </div>
     <div class="episode-audio">
+        <h4>Audio</h4>
         <iframe frameborder="0" height="36px" scrolling="no" seamless src="https://simplecast.fm/e/{{ episode.simplecast_id }}?style=dark" width="100%"></iframe>
         <div class="text-right">
             <a href="http://audio.simplecast.fm/{{ episode.simplecast_id }}.mp3">Download</a>
         </div>
     </div>
     <div class="episode-video">
+        <h4>Video</h4>
         <iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/{{ episode.youtube_id }}?rel=0" frameborder="0" allowfullscreen></iframe><br>
-        <a href="https://www.youtube.com/watch?v={{ episode.youtube_id }}">Watch</a>
+        <div class="text-right">
+            <a href="https://www.youtube.com/watch?v={{ episode.youtube_id }}">Watch</a>
+        </div>
     </div>
     <div class="episode-links">
         <h3 class="episode-links-heading">Links</h3>
