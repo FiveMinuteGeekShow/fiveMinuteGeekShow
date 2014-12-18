@@ -1,0 +1,15 @@
+img {
+    max-width: 100%;
+}
+
+body {
+    border-top: 140px solid #cee7d8;
+    color: #666;
+}
+
+.content {
+    border: 2em solid white;
+    background: #fff;
+    margin-top: -8rem;
+    padding: 2em 3em;
+}

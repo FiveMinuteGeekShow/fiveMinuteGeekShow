@@ -1,3 +1,4 @@
 sculpin_content_types:
-    posts:
-        permalink: blog/:year/:month/:day/:filename/
+    episodes:
+        type: path
+        permalink: episodes/:basename/index.html
