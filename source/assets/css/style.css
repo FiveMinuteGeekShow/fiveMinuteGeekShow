@@ -21,27 +21,61 @@ body {
     }
 }
 
-.primary-footer {
-    margin-bottom: 2em;
-    margin-top: 3em;
+.primary-header {
+    transform: rotate(-0.45deg);
+    -webkit-transform: rotate(-0.45deg);
 }
 
+    .primary-header__title {
+        background: red;
+        font-size: 3rem;
+        letter-spacing: 0.2rem;
+        margin: 0 -1rem 0 -1rem;
+        padding: 2.5rem;
+        position: relative;
+        text-transform: uppercase;
+        z-index: 10;
+    }
+        .primary-header__title a {
+            color: #fff;
+        }
+    .primary-header__nav {
+        background: #eee;
+        font-size: 0.9em;
+        margin-bottom: 3rem;
+        margin-top: -0.25rem;
+        padding: 0.75em 0.5em 0.5em;
+        position: relative;
+        transform: rotate(0.25deg);
+        -webkit-transform: rotate(0.25deg);
+        z-index: 5;
+    }
+
+
 .episode {
-    border-bottom: 5px solid #eee;
-    margin-bottom : 1em;
+    margin-bottom : 5em;
     padding-bottom: 2em;
 }
     .episode-header__title {
-        font-size: 2.5em;
+        border-bottom: 4px solid red;
+        font-size: 2em;
+        padding-bottom: 0.15em;
     }
+        .episode-header__title a {
+            color: #4477aa;
+        }
     .episode-header__meta {
-        font-size: 1.5em;
+        color: #888;
+        font-size: 1em;
         font-style: italic;
+        margin-bottom: 1.25em;
     }
     .episode-header__title + .episode-header__meta {
         margin-top: 0;
     }
 
-.primary-header__title a {
-    color: #333;
+
+.primary-footer {
+    margin-bottom: 2em;
+    margin-top: 3em;
 }
