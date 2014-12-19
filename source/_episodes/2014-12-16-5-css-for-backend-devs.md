@@ -10,5 +10,6 @@ CSS for Backend Devs (OOCSS)
 {% endblock %}
 
 {% block links %}
-- Links here
+- [Full Stack Radio](http://fullstackradio.com/episodes/1/)
+- [Organizing CSS: OOCSS, SMACSS, and BEM](http://mattstauffer.co/blog/organizing-css-oocss-smacss-and-bem)
 {% endblock %}
