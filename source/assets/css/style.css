@@ -56,7 +56,7 @@ body {
     margin-bottom : 5em;
     padding-bottom: 2em;
 }
-    .episode-header__title {
+    .episode-header__title, .page__title {
         border-bottom: 4px solid red;
         font-size: 2em;
         padding-bottom: 0.15em;
